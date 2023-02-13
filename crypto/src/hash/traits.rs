@@ -9,11 +9,13 @@ where
     // with non-hardcoded parameters.
 
     /// Hashes a field element into one. Also known as one to one hashing.
-    fn hash_one(input: field::element::FieldElement<F>) -> field::element::FieldElement<F>;
+    fn hash_one(
+        input: field::element::FieldElement<F>,
+    ) -> Result<field::element::FieldElement<F>, String>;
 
     /// Hashes two field elements into one. Also known as two to one hashing.
     fn hash_two(
         left: field::element::FieldElement<F>,
         right: field::element::FieldElement<F>,
-    ) -> field::element::FieldElement<F>;
+    ) -> Result<field::element::FieldElement<F>, String>;
 }
