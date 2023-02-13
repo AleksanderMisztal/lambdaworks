@@ -84,7 +84,7 @@ impl<F: IsField> Polynomial<FieldElement<F>> {
     }
 
     /// Pads polynomial representations with minimum number of zeros to match lengths.
-    fn pad_with_zero_coefficients(pa: &Self, pb: &Self) -> (Self, Self) {
+    pub fn pad_with_zero_coefficients(pa: &Self, pb: &Self) -> (Self, Self) {
         let mut pa = pa.clone();
         let mut pb = pb.clone();
 
